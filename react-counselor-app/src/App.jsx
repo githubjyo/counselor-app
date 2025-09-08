@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React, { Suspense, lazy } from 'react';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
+// Lazy load pages for better performance
+const Home = lazy(() => import('./Pages/Home'));
+const About = lazy(() => import('./Pages/About'));
+const Counselor = lazy(() => import('./Pages/Counselor'));
+const Services = lazy(() => import('./Pages/Services'));
+const Pricing = lazy(() => import('./Pages/Pricing'));
+const Blogs = lazy(() => import('./Pages/Blogs'));
+const Contact = lazy(() => import('./Pages/Contact'));
+
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+      <main style={{ minHeight: "80vh" }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/counselor" element={<Counselor />} />
+  <Route path="/services" element={<Services />} />
+  <Route path="/pricing" element={<Pricing />} />
+  <Route path="/blogs" element={<Blogs />} />
+  <Route path="/contact" element={<Contact />} />
+</Routes>
+        </Suspense>
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App

@@ -1,0 +1,25 @@
+/* Image */
+.custom-img {
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  display: block;
+}
+
+/* Parent container must be relative */
+.image-container {
+  position: relative;
+}
+
+/* Centered text */
+.center-text {
+  position: absolute;
+  top: 50%;    /* vertically middle */
+  left: 50%;   /* horizontally middle */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
