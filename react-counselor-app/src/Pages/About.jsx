@@ -1,5 +1,4 @@
 import React from 'react';
-import PageWrapper from '../Components/PageWrapper';
 import "../Styles/About.css"; // import the CSS file
 import { Button } from 'bootstrap';
 

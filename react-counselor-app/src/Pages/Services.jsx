@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsCalendar, BsChatDots, BsClipboardCheck } from 'react-icons/bs';
-
+import "../Styles/Home.css"; // import the CSS file
 export default function Services(){
   return (
     <>
