@@ -1,0 +1,37 @@
+
+/* testimoal css */
+
+.testimonial-section {
+  background: url("../../assets/images/testimonal_bg_4.jpg") center center/cover no-repeat;
+  position: relative;
+  min-height: 60vh;   /* reduced height */
+  display: flex;
+  align-items: flex-end; /* push content/cards to bottom */
+  justify-content: center;
+}
+
+.testimonial-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 139, 34, 0.75); /* green overlay */
+  z-index: 1;
+}
+
+.testimonial-section .container {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 40px; /* gap from bottom */
+}
+
+.testimonial-section h6,
+.testimonial-section h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial-section .card {
+  border: none;
+  border-radius: 10px;
+}

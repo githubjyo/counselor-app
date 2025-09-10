@@ -1,0 +1,34 @@
+.blog-card {
+  overflow: hidden;
+}
+
+.date-badge {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: green;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.date-badge h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.date-badge small {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.date-badge p {
+  font-size: 10px;
+}

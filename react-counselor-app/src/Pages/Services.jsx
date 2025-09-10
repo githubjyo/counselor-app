@@ -1,21 +1,23 @@
 import React from 'react';
 import { BsCalendar, BsChatDots, BsClipboardCheck } from 'react-icons/bs';
-import "../Styles/Home.css"; // import the CSS file
+import "../Styles/Home.css"; 
+import ImageBanner from '../Components/ImageBanner/Imagebanner';
+import bannerImg from "../assets/images/head_img_5.jpg";
+import { NavLink } from 'react-router-dom';
 export default function Services(){
   return (
     <>
-   <section className="heading-image">
-  <div className="container-fluid p-0 image-container">
-    <img 
-      src="https://preview.colorlib.com/theme/counselor/images/bg_5.jpg.webp" 
-      alt="Landing" 
-      className="custom-img"
-    />
-    <div className="center-text">
-      <h1>Services</h1>
+     <section className="heading-image">
+  <div>
+      <ImageBanner 
+        imageSrc={bannerImg}
+        overlayText="Services"
+       breadcrumbs={[
+    { name: 'Home', NavLink: '/' },
+    { name: 'Services', NavLink: null }  
+  ]}
+      />
     </div>
-  </div>
-
 </section>
 
 

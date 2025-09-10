@@ -1,5 +1,5 @@
 
-import React, { Suspense, lazy } from 'react';
+import React, { lazy } from 'react';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -18,7 +18,6 @@ export default function App() {
     <>
       <Navbar />
       <main style={{ minHeight: "80vh" }}>
-        <Suspense fallback={<div>Loading...</div>}>
           <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/about" element={<About />} />
@@ -28,7 +27,6 @@ export default function App() {
   <Route path="/blogs" element={<Blogs />} />
   <Route path="/contact" element={<Contact />} />
 </Routes>
-        </Suspense>
       </main>
       <Footer />
     </>

@@ -1,8 +1,10 @@
 import React from 'react';
+import "../Styles/Footer.css"
+import { FaPhone, FaPaperPlane, FaFacebookF, FaTwitter, FaInstagram, FaDribbble } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white pt-5 pb-3">
+    <footer className="bg-dark text-white py-5">
       <div className="container">
         <div className="row gy-4">
           {/* Counselor Section */}
@@ -11,17 +13,18 @@ const Footer = () => {
             <p>
               Far far away, behind the word mountains, far from the countries.
             </p>
-            <div className="d-flex gap-2">
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
+             <div className="social-icons">
+      <a href="https://twitter.com" target="_blank" rel="noreferrer">
+        <FaTwitter />
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <FaFacebookF/>
+
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noreferrer">
+        <FaInstagram/>
+      </a>
+    </div>
           </div>
 
           {/* Explore Section */}

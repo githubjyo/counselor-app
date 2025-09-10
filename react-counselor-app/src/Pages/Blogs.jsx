@@ -1,20 +1,26 @@
 import React from 'react';
+import ImageBanner from '../Components/ImageBanner/Imagebanner';
+import bannerImg from "../assets/images/head_img_5.jpg";
+import { NavLink } from 'react-router-dom';
+import blogData from "../Components/Blogsection/BlogData";
+import BlogCardSection from "../Components/Blogsection/BlogSection";
 export default function Blogs(){
   return (
     <>
      <section className="heading-image">
-  <div className="container-fluid p-0 image-container">
-    <img 
-      src="https://preview.colorlib.com/theme/counselor/images/bg_5.jpg.webp" 
-      alt="Landing" 
-      className="custom-img"
-    />
-    <div className="center-text">
-      <h1>Blogs</h1>
+  <div>
+      <ImageBanner 
+        imageSrc={bannerImg}
+        overlayText="Our Blog"
+       breadcrumbs={[
+    { name: 'Home', NavLink: '/' },
+    { name: 'Blog', NavLink: null }  
+  ]}
+      />
     </div>
-  </div>
-
 </section>
+
+<BlogCardSection blogs={blogData}/>
 </>
   );
 }
