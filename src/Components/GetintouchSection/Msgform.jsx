@@ -1,5 +1,5 @@
 import React from 'react';
-import "./msgform.css"
+import "./Msgform.css"
 export default function GetinTouchMsgform(){
   return (
     <>
