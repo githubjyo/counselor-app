@@ -1,0 +1,28 @@
+
+/* Contact Section */
+.msgform-section {
+  position: relative;
+  height: 500px;
+  background-image: url('../../assets/images/contact_bg_2.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+    background-repeat: no-repeat;
+    background-position: center center !important;
+    background-attachment: fixed;
+}
+
+.msgform-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 55, 37, 0.6); /* greenish overlay */
+  z-index: 1;
+}
+
+.msgform-section .container {
+  position: relative;
+  z-index: 2;
+}

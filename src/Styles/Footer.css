@@ -1,0 +1,22 @@
+.social-icons {
+  display: flex;
+  gap: 10px; /* space between icons */
+}
+
+.social-icons a {
+  width: 40px;              /* circle size */
+  height: 40px;
+  border-radius: 50%;       /* makes circle */
+  background-color: green;  /* circle color */
+  color: white;             /* icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;          /* icon size */
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: darkgreen; /* darker on hover */
+}
